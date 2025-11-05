@@ -1,36 +1,201 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# پروژه کمپین‌های بازاریابی و تبلیغاتی
 
-## Getting Started
+این پروژه شامل 4 بخش اصلی است که با استفاده از Next.js 16، Tailwind CSS، Swiper.js، React Hook Form و Framer Motion پیاده‌سازی شده است.
 
-First, run the development server:
+## 📋 بخش‌های پروژه
+
+### 1. Hero Section (بخش معرفی)
+- تصویر توضیحی لپ‌تاپ با المان‌های انیمیشن‌دار
+- متن معرفی و دکمه دریافت مشاوره
+- انیمیشن‌های Framer Motion برای ورود به viewport
+
+### 2. Common Obstacles Section (بخش موانع رایج)
+- اسلایدر Swiper با 4 کارت
+- قابلیت autoplay با توقف در hover
+- دکمه‌های Navigation
+- پس‌زمینه بنفش با طراحی مدرن
+
+### 3. Consultation Form (فرم دریافت مشاوره)
+- مدیریت فرم با React Hook Form
+- اعتبارسنجی کامل فیلدها
+- نمایش خطاها به صورت زنده
+- تابع async که پس از 2 ثانیه لاگ می‌کند
+- انتخاب سرویس با دکمه‌های pill-shaped
+
+### 4. FAQ Section (بخش سوالات متداول)
+- آکاردئون با انیمیشن smooth
+- باز و بسته شدن با کلیک روی + و -
+- انیمیشن چرخش آیکون
+
+## 🚀 نصب و راه‌اندازی
+
+### پیش‌نیازها
+
+```bash
+Node.js >= 20.9.0
+npm یا yarn
+```
+
+### مراحل نصب
+
+1. **نصب وابستگی‌ها:**
+
+```bash
+npm install
+```
+
+این دستور بسته‌های زیر را نصب می‌کند:
+- `swiper` - برای کاروسل/اسلایدر
+- `react-hook-form` - برای مدیریت فرم
+- `framer-motion` - برای انیمیشن‌ها
+
+2. **اجرای پروژه در حالت توسعه:**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **مشاهده پروژه:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+پروژه در آدرس زیر در دسترس خواهد بود:
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 تکنولوژی‌های استفاده شده
 
-## Learn More
+- **Next.js 16** - فریم‌ورک React با App Router
+- **Tailwind CSS v4** - فریم‌ورک CSS برای استایل‌دهی
+- **Swiper.js** - کتابخانه اسلایدر/کاروسل
+- **React Hook Form** - مدیریت فرم و اعتبارسنجی
+- **Framer Motion** - انیمیشن‌های پیشرفته React
+- **TypeScript** - برای type safety
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 ویژگی‌های پیاده‌سازی شده
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Hero Section
+- ✅ انیمیشن ورود از چپ و راست
+- ✅ آیکون‌های شناور با انیمیشن حرکت عمودی
+- ✅ طراحی Responsive
+- ✅ دکمه با افکت hover و tap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Common Obstacles Section
+- ✅ Swiper با autoplay
+- ✅ Pause on hover
+- ✅ دکمه‌های Navigation (چپ/راست)
+- ✅ Responsive با نمایش تعداد مختلف کارت در سایزهای مختلف
+- ✅ انیمیشن ورود هر کارت با delay متفاوت
 
-## Deploy on Vercel
+### Consultation Form
+- ✅ React Hook Form برای مدیریت state
+- ✅ onChange برای همه فیلدها (از طریق register)
+- ✅ Validation کامل (نام، ایمیل، شماره تلفن)
+- ✅ نمایش پیام خطا به رنگ قرمز
+- ✅ تابع async با تاخیر 2 ثانیه
+- ✅ جلوگیری از ارسال در صورت خطا
+- ✅ انتخاب سرویس با دکمه‌های تعاملی
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### FAQ Section
+- ✅ آکاردئون با انیمیشن باز/بسته شدن
+- ✅ چرخش آیکون + هنگام باز شدن
+- ✅ انیمیشن smooth برای height و opacity
+- ✅ طراحی تمیز و مدرن
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎭 انیمیشن‌های Framer Motion
+
+همه بخش‌ها دارای انیمیشن‌های زیر هستند:
+
+- **whileInView**: انیمیشن هنگام ورود به viewport
+- **initial**: حالت اولیه قبل از انیمیشن
+- **animate**: حالت نهایی پس از انیمیشن
+- **transition**: مدت زمان و نوع انیمیشن
+- **viewport={{ once: true }}**: انیمیشن فقط یک بار اجرا می‌شود
+
+## 📱 Responsive Design
+
+پروژه برای سایزهای مختلف بهینه شده است:
+
+- **Mobile**: تک ستونی
+- **Tablet** (md: 768px+): دو ستونی برای برخی بخش‌ها
+- **Desktop** (lg: 1024px+): لی‌اوت کامل
+
+## 🌐 پشتیبانی از RTL
+
+پروژه به طور کامل از راست به چپ (RTL) پشتیبانی می‌کند:
+- تنظیم `dir="rtl"` در html
+- تنظیم `lang="fa"` برای فارسی
+- استفاده از `text-right` برای تراز متن
+
+## 🎯 نکات مهم
+
+1. **Dependencies**: اطمینان حاصل کنید که تمام بسته‌ها نصب شده‌اند
+2. **Node Version**: حداقل نسخه 20.9.0 مورد نیاز است
+3. **CSS Classes**: پروژه از Tailwind CSS v4 استفاده می‌کند
+4. **Swiper Styles**: استایل‌های Swiper به صورت manual import شده‌اند
+
+## 🐛 رفع مشکلات رایج
+
+### خطای Module not found
+
+اگر با خطای "Cannot find module" مواجه شدید:
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### خطای Permission denied
+
+اگر با خطای permission مواجه شدید:
+
+```bash
+sudo chown -R $USER:$USER .
+npm install
+```
+
+## 📝 ساختار فایل‌ها
+
+```
+persian-asr-hooshmand/
+├── app/
+│   ├── page.tsx          # صفحه اصلی با تمام کامپوننت‌ها
+│   ├── layout.tsx        # Layout با تنظیمات RTL
+│   └── globals.css       # استایل‌های سراسری و Tailwind
+├── public/               # فایل‌های استاتیک
+├── package.json          # وابستگی‌ها
+└── README.md            # این فایل
+```
+
+## ✨ ویژگی‌های کدنویسی
+
+- ✅ کد تمیز و خوانا
+- ✅ Component-based architecture
+- ✅ TypeScript برای type safety
+- ✅ Consistent naming conventions
+- ✅ Comments به زبان انگلیسی
+- ✅ Responsive و Mobile-first
+- ✅ Accessibility considerations
+
+## 🔧 اسکریپت‌های موجود
+
+```bash
+# اجرای پروژه در حالت Development
+npm run dev
+
+# Build کردن برای Production
+npm run build
+
+# اجرای نسخه Production
+npm start
+
+# بررسی Lint errors
+npm run lint
+```
+
+## 📞 پشتیبانی
+
+در صورت بروز هر گونه مشکل یا سوال، لطفاً issue ایجاد کنید.
+
+---
+
+**نکته**: این پروژه به عنوان یک تسک ارزیابی مهارت طراحی شده و کد نوشته شده در پروژه اصلی استفاده نخواهد شد.

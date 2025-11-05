@@ -1,26 +1,110 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    background: var(--background);
+    color: var(--foreground);
+    /* font-family: iran_reg, 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    direction: rtl;
+    /* font-family: 'iran_reg', 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Swiper styles override for RTL */
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply text-primary;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply bg-primary;
+  }
+
+  /* Hide default Swiper navigation buttons when using custom ones */
+  .obstacles-swiper .swiper-button-next,
+  .obstacles-swiper .swiper-button-prev {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+/* IRANYekan Font Family */
+@font-face {
+  font-family: iran_bold;
+  src: url('/assets/fonts/IRANYekanBold.ttf');
+}
+@font-face {
+  font-family: iran_light;
+  src: url('/assets/fonts/IRANYekanLight.ttf');
+}
+@font-face {
+  font-family: iran_reg;
+  src: url('/assets/fonts/IRANYekanRegular.ttf');
+}
+@font-face {
+  font-family: iran_med;
+  src: url('/assets/fonts/IRANYekanMedium.ttf');
+}
+@font-face {
+  font-family: iran_xbold;
+  src: url('/assets/fonts/IRANYekanExtraBold.ttf');
+}
+@font-face {
+  font-family: num_light;
+  src: url('/assets/fonts/num_light.ttf');
+}
+@font-face {
+  font-family: num_bold;
+  src: url('/assets/fonts/num_bold.ttf');
+}
+
+@font-face {
+  font-family: custom_en;
+  src: url('/assets/fonts/BrittanySignature.ttf');
+}
+
+@font-face {
+  font-family: iran_black;
+  src: url('/assets/fonts/IRANYekanBlackFaNum.ttf');
+}
+
+@font-face {
+  font-family: kalame_black;
+  src: url('/assets/fonts/KalamehFaNum-Black.ttf');
+}
+
+@font-face {
+  font-family: kalame_bold;
+  src: url('/assets/fonts/KalamehFaNum-Bold.ttf');
+}
+
+@font-face {
+  font-family: kalame_reg;
+    src: url('/assets/fonts/KalamehFaNum-Regular.ttf');
+}
+@font-face {
+  font-family: kalame_thin;
+  src: url('/assets/fonts/KalamehFaNum-Thin.ttf');
 }
