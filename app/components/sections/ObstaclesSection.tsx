@@ -133,19 +133,19 @@ export default function ObstaclesSection() {
             breakpoints={{
               480: {
                 slidesPerView: 1.5,
-                spaceBetween: 20,
+                spaceBetween: 0,
               },
               640: {
                 slidesPerView: 2.5,
-                spaceBetween: 25,
+                spaceBetween: 0,
               },
               768: {
                 slidesPerView: 3.2,
-                spaceBetween: 25,
+                spaceBetween: 0,
               },
               1024: {
                 slidesPerView: 4,
-                spaceBetween: 30,
+                spaceBetween: 0,
               },
             }}
             className="obstacles-swiper px-12 "
@@ -157,7 +157,7 @@ export default function ObstaclesSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-[8px] p-7 min-h-[226px] md:mx-4 -translate-y-10 border border-[#E3E3E3]  transition-shadow"
+                className="bg-white rounded-[8px] p-7 min-h-[226px]  -translate-y-10 border border-[#E3E3E3]  transition-shadow"
               >
                 <div className="flex flex-col items-center text-center h-full">
                   <div className="mb-6">
